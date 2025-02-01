@@ -34,11 +34,25 @@ const App = () => {
         <div>
           <Header handlePrint={handlePrint} />
           <MainDetails name={name} address={address} />
-          <ClientDetails />
-          <Dates />
+          <ClientDetails
+            clientName={clientName}
+            clientAddress={clientAddress}
+          />
+          <Dates
+            invoiceNumber={invoiceNumber}
+            invoiceDate={invoiceDate}
+            dueDate={dueDate}
+          />
           <Table />
-          <Notes />
-          <Footer name={name} email={email} website={website} />
+          <Notes notes={notes} />
+          <Footer
+            name={name}
+            email={email}
+            phone={phone}
+            bankName={bankName}
+            bankAccount={bankAccount}
+            website={website}
+          />
           <Button
             onClick={() => setShowInvoice(false)}
             text={"Edit Invoice"}
@@ -100,16 +114,6 @@ const App = () => {
             id="bankName"
             value={bankName}
             onChange={(e) => setBankName(e.target.value)}
-            autoComplete="off"
-          />
-          {/* BankAccount */}
-          <label htmlFor="bankAccount">Enter your Bank Account</label>
-          <input
-            type="text"
-            placeholder="Enter your Bank Account"
-            id="bankAccount"
-            value={bankAccount}
-            onChange={(e) => setBankAccount(e.target.value)}
             autoComplete="off"
           />
           {/* BankAccount */}
