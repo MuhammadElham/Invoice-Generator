@@ -82,6 +82,46 @@ const App = () => {
             onChange={(e) => setEmail(e.target.value)}
             autoComplete="off"
           />
+          {/* Phone */}
+          <label htmlFor="phone">Enter your phone number</label>
+          <input
+            type="text"
+            placeholder="Enter your phone number"
+            id="phone"
+            value={phone}
+            onChange={(e) => setPhone(e.target.value)}
+            autoComplete="off"
+          />
+          {/* BankName */}
+          <label htmlFor="bankName">Enter your Bank Name</label>
+          <input
+            type="text"
+            placeholder="Enter your Bank Name"
+            id="bankName"
+            value={bankName}
+            onChange={(e) => setBankName(e.target.value)}
+            autoComplete="off"
+          />
+          {/* BankAccount */}
+          <label htmlFor="bankAccount">Enter your Bank Account</label>
+          <input
+            type="text"
+            placeholder="Enter your Bank Account"
+            id="bankAccount"
+            value={bankAccount}
+            onChange={(e) => setBankAccount(e.target.value)}
+            autoComplete="off"
+          />
+          {/* BankAccount */}
+          <label htmlFor="bankAccount">Enter your Bank Account</label>
+          <input
+            type="text"
+            placeholder="Enter your Bank Account"
+            id="bankAccount"
+            value={bankAccount}
+            onChange={(e) => setBankAccount(e.target.value)}
+            autoComplete="off"
+          />
           {/* Website */}
           <label htmlFor="website">Enter your website</label>
           <input
@@ -92,6 +132,67 @@ const App = () => {
             onChange={(e) => setWebsite(e.target.value)}
             autoComplete="off"
           />
+          {/* clientName */}
+          <label htmlFor="clientName">Enter your client's name</label>
+          <input
+            type="text"
+            placeholder="Enter your client's name"
+            id="clientName"
+            value={clientName}
+            onChange={(e) => setClientName(e.target.value)}
+            autoComplete="off"
+          />
+          {/* clientAddress */}
+          <label htmlFor="clientAddress">Enter your client's address</label>
+          <input
+            type="text"
+            placeholder="Enter your client's address"
+            id="clientAddress"
+            value={clientAddress}
+            onChange={(e) => setClientAddress(e.target.value)}
+            autoComplete="off"
+          />
+          {/* InvoiceNumber */}
+          <label htmlFor="invoiceNumber">Enter your Invoice number</label>
+          <input
+            type="text"
+            placeholder="Enter your Invoice number"
+            id="invoiceNumber"
+            value={invoiceNumber}
+            onChange={(e) => setInvoiceNumber(e.target.value)}
+            autoComplete="off"
+          />
+          {/* InvoiceDate */}
+          <label htmlFor="invoiceDate">Enter your Invoice date</label>
+          <input
+            type="date"
+            placeholder="Enter your Invoice date"
+            id="invoiceDate"
+            value={invoiceDate}
+            onChange={(e) => setInvoiceDate(e.target.value)}
+            autoComplete="off"
+          />
+          {/* DueDate */}
+          <label htmlFor="dueDate">Enter your Due date</label>
+          <input
+            type="date"
+            placeholder="Enter your Due date"
+            id="dueDate"
+            value={dueDate}
+            onChange={(e) => setDueDate(e.target.value)}
+            autoComplete="off"
+          />
+          {/* Notes */}
+          <label htmlFor="notes">Additional Notes</label>
+          <textarea
+            name="notes"
+            id="notes"
+            rows={30}
+            cols={10}
+            placeholder="Additional notes to the Client"
+            value={notes}
+            onChange={(e) => setNotes(e.target.value)}
+          ></textarea>
 
           <Button
             onClick={() => setShowInvoice(true)}
