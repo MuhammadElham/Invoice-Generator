@@ -33,7 +33,7 @@ const App = () => {
       {showInvoice ? (
         <div>
           <Header handlePrint={handlePrint} />
-          <MainDetails />
+          <MainDetails name={name} address={address}/>
           <ClientDetails />
           <Dates />
           <Table />
