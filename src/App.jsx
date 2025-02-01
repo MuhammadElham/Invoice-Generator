@@ -41,7 +41,7 @@ const App = () => {
           <Footer />
           <Button
             onClick={() => setShowInvoice(false)}
-            text={"Preview Invoice"}
+            text={"Edit Invoice"}
             bgColor={"bg-blue-500"}
             textColor={"text-white"}
             borderColor={"border-blue-500"}
@@ -52,7 +52,36 @@ const App = () => {
       ) : (
         // name, address, email , phone , bank name, bank account number, website ,client name, client address, invoice number, invoice date , due date, notes
         <div className="flex flex-col justify-center">
-          <input type="text" placeholder="Enter your Name" autoComplete="off" />
+          {/* Name */}
+          <label htmlFor="name">Enter your name</label>
+          <input
+            type="text"
+            placeholder="Enter your name"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            autoComplete="off"
+          />
+          {/* Address */}
+          <label htmlFor="address">Enter your address</label>
+          <input
+            type="text"
+            placeholder="Enter your address"
+            id="address"
+            value={address}
+            onChange={(e) => setAddress(e.target.value)}
+            autoComplete="off"
+          />
+          {/* Email */}
+          <label htmlFor="email">Enter your email</label>
+          <input
+            type="email"
+            placeholder="Enter your email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            autoComplete="off"
+          />
 
           <Button
             onClick={() => setShowInvoice(true)}
