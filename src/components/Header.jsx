@@ -18,11 +18,11 @@ const Header = ({ handlePrint }) => {
               <Button
                 onClick={handlePrint}
                 text={"Print"}
-                bgColor={"bg-blue-500"}
+                bgColor={"bg-gray-500"}
                 textColor={"text-white"}
-                borderColor={"border-blue-500"}
+                borderColor={"border-gray-500"}
                 hoverBg={"hover:bg-transparent"}
-                hoverText={"hover:text-blue-500 "}
+                hoverText={"hover:text-gray-500 "}
                 mt="mt-0"
                 className="btn btn-print"
               />
@@ -42,11 +42,11 @@ const Header = ({ handlePrint }) => {
             <li>
               <Button
                 text={"Send"}
-                bgColor={"bg-blue-500"}
+                bgColor={"bg-green-500"}
                 textColor={"text-white"}
-                borderColor={"border-blue-500"}
+                borderColor={"border-green-500"}
                 hoverBg={"hover:bg-transparent"}
-                hoverText={"hover:text-blue-500 "}
+                hoverText={"hover:text-green-500 "}
                 mt="mt-0"
                 className="btn btn-send"
               />
