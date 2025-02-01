@@ -1,16 +1,17 @@
 import React from "react";
 
-const Footer = () => {
+const Footer = ({ name, email, website }) => {
   return (
     <div>
       <footer>
         <ul className="flex items-center justify-center flex-wrap gap-5">
           <li>
-            <span className="font-bold">Your name: </span>Muhammad Elham Waheed
+            <span className="font-bold">Your name: </span>
+            {name}
           </li>
           <li>
             <span className="font-bold">Your email: </span>
-            elhamwheed777@gmil.com
+            {email}
           </li>
           <li>
             <span className="font-bold">Phone number: </span>+92 2762118
@@ -19,14 +20,15 @@ const Footer = () => {
             <span className="font-bold">Bank: </span>MCB
           </li>
           <li>
-            <span className="font-bold">Account holder: </span>Muhammad Elham
-            Waheed
+            <span className="font-bold">Account holder: </span>
+            {name}
           </li>
           <li>
             <span className="font-bold">Account number: </span>123 456 789
           </li>
           <li>
-            <span className="font-bold">Website: </span>https:elham.framer.ai
+            <span className="font-bold">Website: </span>
+            <a href={website} target="_blank">{website}</a>
           </li>
         </ul>
       </footer>

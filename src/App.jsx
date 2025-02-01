@@ -33,12 +33,12 @@ const App = () => {
       {showInvoice ? (
         <div>
           <Header handlePrint={handlePrint} />
-          <MainDetails name={name} address={address}/>
+          <MainDetails name={name} address={address} />
           <ClientDetails />
           <Dates />
           <Table />
           <Notes />
-          <Footer />
+          <Footer name={name} email={email} website={website} />
           <Button
             onClick={() => setShowInvoice(false)}
             text={"Edit Invoice"}
@@ -80,6 +80,16 @@ const App = () => {
             id="email"
             value={email}
             onChange={(e) => setEmail(e.target.value)}
+            autoComplete="off"
+          />
+          {/* Website */}
+          <label htmlFor="website">Enter your website</label>
+          <input
+            type="text"
+            placeholder="Enter your website"
+            id="website"
+            value={website}
+            onChange={(e) => setWebsite(e.target.value)}
             autoComplete="off"
           />
 
