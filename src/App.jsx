@@ -158,62 +158,76 @@ const App = () => {
               />
             </div>
           </article>
-          {/* clientName */}
-          <label htmlFor="clientName">Enter your client's name</label>
-          <input
-            type="text"
-            placeholder="Enter your client's name"
-            id="clientName"
-            value={clientName}
-            onChange={(e) => setClientName(e.target.value)}
-            autoComplete="off"
-          />
-          {/* clientAddress */}
-          <label htmlFor="clientAddress">Enter your client's address</label>
-          <input
-            type="text"
-            placeholder="Enter your client's address"
-            id="clientAddress"
-            value={clientAddress}
-            onChange={(e) => setClientAddress(e.target.value)}
-            autoComplete="off"
-          />
-          {/* InvoiceNumber */}
-          <label htmlFor="invoiceNumber">Enter your Invoice number</label>
-          <input
-            type="text"
-            placeholder="Enter your Invoice number"
-            id="invoiceNumber"
-            value={invoiceNumber}
-            onChange={(e) => setInvoiceNumber(e.target.value)}
-            autoComplete="off"
-          />
-          {/* InvoiceDate */}
-          <label htmlFor="invoiceDate">Enter your Invoice date</label>
-          <input
-            type="date"
-            placeholder="Enter your Invoice date"
-            id="invoiceDate"
-            value={invoiceDate}
-            onChange={(e) => setInvoiceDate(e.target.value)}
-            autoComplete="off"
-          />
-          {/* DueDate */}
-          <label htmlFor="dueDate">Enter your Due date</label>
-          <input
-            type="date"
-            placeholder="Enter your Due date"
-            id="dueDate"
-            value={dueDate}
-            onChange={(e) => setDueDate(e.target.value)}
-            autoComplete="off"
-          />
+          <article className="md:grid grid-cols-2 gap-10 md:mt-16">
+            {/* clientName */}
+            <div className="flex flex-col">
+              <label htmlFor="clientName">Enter your client's name</label>
+              <input
+                type="text"
+                placeholder="Enter your client's name"
+                id="clientName"
+                value={clientName}
+                onChange={(e) => setClientName(e.target.value)}
+                autoComplete="off"
+              />
+            </div>
+            {/* clientAddress */}
+            <div className="flex flex-col">
+              <label htmlFor="clientAddress">Enter your client's address</label>
+              <input
+                type="text"
+                placeholder="Enter your client's address"
+                id="clientAddress"
+                value={clientAddress}
+                onChange={(e) => setClientAddress(e.target.value)}
+                autoComplete="off"
+              />
+            </div>
+          </article>
+          <article className="md:grid grid-cols-3 gap-10 ">
+            <div className="flex flex-col">
+              {/* InvoiceNumber */}
+              <label htmlFor="invoiceNumber">Enter your Invoice number</label>
+              <input
+                type="text"
+                placeholder="Enter your Invoice number"
+                id="invoiceNumber"
+                value={invoiceNumber}
+                onChange={(e) => setInvoiceNumber(e.target.value)}
+                autoComplete="off"
+              />
+            </div>
+            <div className="flex flex-col">
+              {/* InvoiceDate */}
+              <label htmlFor="invoiceDate">Enter your Invoice date</label>
+              <input
+                type="date"
+                placeholder="Enter your Invoice date"
+                id="invoiceDate"
+                value={invoiceDate}
+                onChange={(e) => setInvoiceDate(e.target.value)}
+                autoComplete="off"
+              />
+            </div>
+            <div className="flex flex-col">
+              {/* DueDate */}
+              <label htmlFor="dueDate">Enter your Due date</label>
+              <input
+                type="date"
+                placeholder="Enter your Due date"
+                id="dueDate"
+                value={dueDate}
+                onChange={(e) => setDueDate(e.target.value)}
+                autoComplete="off"
+              />
+            </div>
+          </article>
           {/* Notes */}
           <label htmlFor="notes">Additional Notes</label>
           <textarea
             name="notes"
             id="notes"
-            rows={30}
+            rows={10}
             cols={10}
             placeholder="Additional notes to the Client"
             value={notes}
