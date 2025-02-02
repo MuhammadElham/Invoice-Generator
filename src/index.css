@@ -7,6 +7,24 @@ body {
     background-color: #f1f1f1;
 }
 
+label {
+    margin-bottom: 0.3rem;
+    font-size: 1.05rem;
+    font-weight: bold;
+    color: #474646;
+}
+
+input,
+textarea {
+    padding: 0.5rem;
+    background-color: #f1f1f1;
+    border-radius: 0.2rem;
+    outline: none;
+    margin-bottom: 2rem;
+    color: #2e2e2e;
+    font-weight: 500;
+}
+
 button {
     user-select: none;
 }

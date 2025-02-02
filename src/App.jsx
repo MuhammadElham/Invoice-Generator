@@ -66,76 +66,98 @@ const App = () => {
       ) : (
         // name, address, email , phone , bank name, bank account number, website ,client name, client address, invoice number, invoice date , due date, notes
         <div className="flex flex-col justify-center">
-          {/* Name */}
-          <label htmlFor="name">Enter your name</label>
-          <input
-            type="text"
-            placeholder="Enter your name"
-            id="name"
-            value={name}
-            onChange={(e) => setName(e.target.value)}
-            autoComplete="off"
-          />
-          {/* Address */}
-          <label htmlFor="address">Enter your address</label>
-          <input
-            type="text"
-            placeholder="Enter your address"
-            id="address"
-            value={address}
-            onChange={(e) => setAddress(e.target.value)}
-            autoComplete="off"
-          />
-          {/* Email */}
-          <label htmlFor="email">Enter your email</label>
-          <input
-            type="email"
-            placeholder="Enter your email"
-            id="email"
-            value={email}
-            onChange={(e) => setEmail(e.target.value)}
-            autoComplete="off"
-          />
-          {/* Phone */}
-          <label htmlFor="phone">Enter your phone number</label>
-          <input
-            type="text"
-            placeholder="Enter your phone number"
-            id="phone"
-            value={phone}
-            onChange={(e) => setPhone(e.target.value)}
-            autoComplete="off"
-          />
-          {/* BankName */}
-          <label htmlFor="bankName">Enter your Bank Name</label>
-          <input
-            type="text"
-            placeholder="Enter your Bank Name"
-            id="bankName"
-            value={bankName}
-            onChange={(e) => setBankName(e.target.value)}
-            autoComplete="off"
-          />
-          {/* BankAccount */}
-          <label htmlFor="bankAccount">Enter your Bank Account</label>
-          <input
-            type="text"
-            placeholder="Enter your Bank Account"
-            id="bankAccount"
-            value={bankAccount}
-            onChange={(e) => setBankAccount(e.target.value)}
-            autoComplete="off"
-          />
-          {/* Website */}
-          <label htmlFor="website">Enter your website</label>
-          <input
-            type="text"
-            placeholder="Enter your website"
-            id="website"
-            value={website}
-            onChange={(e) => setWebsite(e.target.value)}
-            autoComplete="off"
-          />
+          {/* Grid of 2 */}
+          <article className="md:grid grid-cols-2 gap-10">
+            {/* Name */}
+            <div className="flex flex-col">
+              <label htmlFor="name">Enter your name</label>
+              <input
+                type="text"
+                placeholder="Enter your name"
+                id="name"
+                value={name}
+                onChange={(e) => setName(e.target.value)}
+                autoComplete="off"
+              />
+            </div>
+            {/* Address */}
+            <div className="flex flex-col">
+              <label htmlFor="address">Enter your address</label>
+              <input
+                type="text"
+                placeholder="Enter your address"
+                id="address"
+                value={address}
+                onChange={(e) => setAddress(e.target.value)}
+                autoComplete="off"
+              />
+            </div>
+          </article>
+          {/* Grid of 3 */}
+          <article className="md:grid grid-cols-3 gap-10">
+            {/* Email */}
+            <div className="flex flex-col">
+              <label htmlFor="email">Enter your email</label>
+              <input
+                type="email"
+                placeholder="Enter your email"
+                id="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                autoComplete="off"
+              />
+            </div>
+            {/* Phone */}
+            <div className="flex flex-col">
+              <label htmlFor="phone">Enter your phone number</label>
+              <input
+                type="text"
+                placeholder="Enter your phone number"
+                id="phone"
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                autoComplete="off"
+              />
+            </div>
+            {/* Website */}
+            <div className="flex flex-col">
+              <label htmlFor="website">Enter your website</label>
+              <input
+                type="text"
+                placeholder="Enter your website"
+                id="website"
+                value={website}
+                onChange={(e) => setWebsite(e.target.value)}
+                autoComplete="off"
+              />
+            </div>
+          </article>
+          <article className="md:grid grid-cols-2 gap-10">
+            {/* BankName */}
+            <div className="flex flex-col">
+              <label htmlFor="bankName">Enter your Bank Name</label>
+              <input
+                type="text"
+                placeholder="Enter your Bank Name"
+                id="bankName"
+                value={bankName}
+                onChange={(e) => setBankName(e.target.value)}
+                autoComplete="off"
+              />
+            </div>
+            {/* BankAccount */}
+            <div className="flex flex-col">
+              <label htmlFor="bankAccount">Enter your Bank Account</label>
+              <input
+                type="text"
+                placeholder="Enter your Bank Account"
+                id="bankAccount"
+                value={bankAccount}
+                onChange={(e) => setBankAccount(e.target.value)}
+                autoComplete="off"
+              />
+            </div>
+          </article>
           {/* clientName */}
           <label htmlFor="clientName">Enter your client's name</label>
           <input
