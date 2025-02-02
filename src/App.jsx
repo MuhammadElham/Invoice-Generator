@@ -7,23 +7,34 @@ import ClientDetails from "./components/ClientDetails";
 import Header from "./components/Header";
 import MainDetails from "./components/MainDetails";
 import Button from "./components/Shared/Button";
+import TableForm from "./components/TableForm";
 
 const App = () => {
-  const [showInvoice, setShowInvoice] = useState(false);
-  // Details
-  const [name, setName] = useState("");
-  const [address, setAddress] = useState("");
-  const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [bankName, setBankName] = useState("");
-  const [bankAccount, setBankAccount] = useState("");
-  const [website, setWebsite] = useState("");
-  const [clientName, setClientName] = useState("");
-  const [clientAddress, setClientAddress] = useState("");
-  const [invoiceNumber, setInvoiceNumber] = useState("");
-  const [invoiceDate, setInvoiceDate] = useState("");
-  const [dueDate, setDueDate] = useState("");
-  const [notes, setNotes] = useState("");
+  const [showInvoice, setShowInvoice] = useState(true);
+  // Changes on Details
+  const [name, setName] = useState("Muhammad Elham Waheed");
+  const [address, setAddress] = useState(
+    "House No.250-A, sec 11 1/2, Orangi Town Karachi"
+  );
+  const [email, setEmail] = useState("elhamwaheed777@gmail.com");
+  const [phone, setPhone] = useState("03333003310");
+  const [bankName, setBankName] = useState("MCB");
+  const [bankAccount, setBankAccount] = useState("123 564 879");
+  const [website, setWebsite] = useState("https://elham.framer.ai");
+  const [clientName, setClientName] = useState("John Ford");
+  const [clientAddress, setClientAddress] = useState(
+    "House No.786-A, sec 11 1/2, USA"
+  );
+  const [invoiceNumber, setInvoiceNumber] = useState("25416398");
+  const [invoiceDate, setInvoiceDate] = useState("02/02/2025");
+  const [dueDate, setDueDate] = useState("15/02/2025");
+  const [notes, setNotes] = useState(
+    "There are some details description which your are write"
+  );
+  const [description, setDescription] = useState("");
+  const [quantity, setQuantity] = useState("");
+  const [price, setPrice] = useState("");
+  const [amount, setAmount] = useState("");
   const handlePrint = () => {
     window.print();
   };
@@ -222,6 +233,13 @@ const App = () => {
               />
             </div>
           </article>
+          {/* Table Form */}
+          <article>
+            <TableForm
+              description={description}
+              setDescription={setDescription}
+            />
+          </article>
           {/* Notes */}
           <label htmlFor="notes">Additional Notes</label>
           <textarea
@@ -233,7 +251,6 @@ const App = () => {
             value={notes}
             onChange={(e) => setNotes(e.target.value)}
           ></textarea>
-
           <Button
             onClick={() => setShowInvoice(true)}
             text={"Preview Invoice"}
