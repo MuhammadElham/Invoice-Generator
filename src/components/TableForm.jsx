@@ -11,8 +11,7 @@ const TableForm = ({
   setAmount,
 }) => {
   return (
-    // Yaha Gap dekhna he
-    <div className="md:grid grid-cols-4 gap-10">
+    <>
       <div className="flex flex-col">
         <label htmlFor="description">Enter the Description</label>
         <input
@@ -24,40 +23,42 @@ const TableForm = ({
           onChange={(e) => setDescription(e.target.value)}
         />
       </div>
-      <div className="flex flex-col">
-        <label htmlFor="quantity">Enter the Quantity</label>
-        <input
-          type="text"
-          id="quantity"
-          name="quantity"
-          placeholder="Item quantity"
-          value={quantity}
-          onChange={(e) => setQuantity(e.target.value)}
-        />
+      <div className="md:grid grid-cols-3 gap-10">
+        <div className="flex flex-col">
+          <label htmlFor="quantity">Enter the Quantity</label>
+          <input
+            type="text"
+            id="quantity"
+            name="quantity"
+            placeholder="Item quantity"
+            value={quantity}
+            onChange={(e) => setQuantity(e.target.value)}
+          />
+        </div>
+        <div className="flex flex-col">
+          <label htmlFor="price">Enter the Price</label>
+          <input
+            type="text"
+            id="price"
+            name="price"
+            placeholder="Item price"
+            value={price}
+            onChange={(e) => setPrice(e.target.value)}
+          />
+        </div>
+        <div className="flex flex-col">
+          <label htmlFor="amount">Enter the Amount</label>
+          <input
+            type="text"
+            id="amount"
+            name="amount"
+            placeholder="Item amount"
+            value={amount}
+            onChange={(e) => setAmount(e.target.value)}
+          />
+        </div>
       </div>
-      <div className="flex flex-col">
-        <label htmlFor="price">Enter the Price</label>
-        <input
-          type="text"
-          id="price"
-          name="price"
-          placeholder="Item price"
-          value={price}
-          onChange={(e) => setPrice(e.target.value)}
-        />
-      </div>
-      <div className="flex flex-col">
-        <label htmlFor="amount">Enter the Amount</label>
-        <input
-          type="text"
-          id="amount"
-          name="amount"
-          placeholder="Item amount"
-          value={amount}
-          onChange={(e) => setAmount(e.target.value)}
-        />
-      </div>
-    </div>
+    </>
   );
 };
 
