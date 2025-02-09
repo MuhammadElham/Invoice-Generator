@@ -1,6 +1,6 @@
 import React from "react";
 
-const Table = () => {
+const Table = ({ description, quantity, price, amount }) => {
   return (
     <table className="w-full text-left">
       <thead>
@@ -13,10 +13,10 @@ const Table = () => {
       </thead>
       <tbody>
         <tr>
-          <td>Here's long description here</td>
-          <td>100</td>
-          <td>$86</td>
-          <td>$115</td>
+          <td>{description}</td>
+          <td>{quantity}</td>
+          <td>{price}</td>
+          <td>{amount}</td>
         </tr>
       </tbody>
     </table>

@@ -54,7 +54,12 @@ const App = () => {
             invoiceDate={invoiceDate}
             dueDate={dueDate}
           />
-          <Table />
+          <Table
+            description={description}
+            quantity={quantity}
+            price={price}
+            amount={amount}
+          />
           <Notes notes={notes} />
           <Footer
             name={name}
@@ -238,6 +243,12 @@ const App = () => {
             <TableForm
               description={description}
               setDescription={setDescription}
+              quantity={quantity}
+              setQuantity={setQuantity}
+              price={price}
+              setPrice={setPrice}
+              amount={amount}
+              setAmount={setAmount}
             />
           </article>
           {/* Notes */}
